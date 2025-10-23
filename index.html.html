@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CreativeVision | Best Graphic Design Studio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: #0e0e0e;
+      color: #f5f5f5;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #ff4d5a;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ff4d5a;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      height: 100vh;
+      background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.7), #111),
+        url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1920&q=80')
+          center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      flex-direction: column;
+      padding: 0 20px;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      max-width: 700px;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin-bottom: 40px;
+      color: #ccc;
+    }
+
+    .hero a {
+      background: #ff4d5a;
+      padding: 14px 40px;
+      color: #fff;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: background 0.3s;
+    }
+
+    .hero a:hover {
+      background: #ff6b77;
+    }
+
+    /* ===== SECTIONS ===== */
+    section {
+      padding: 100px 60px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 70px;
+    }
+
+    .section-title h2 {
+      font-size: 2.4rem;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #aaa;
+      font-size: 1rem;
+    }
+
+    /* ===== SERVICES ===== */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+    }
+
+    .service-box {
+      background: #1a1a1a;
+      padding: 40px 30px;
+      border-radius: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      border: 1px solid #222;
+    }
+
+    .service-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(255, 77, 90, 0.2);
+    }
+
+    .service-box h3 {
+      color: #ff4d5a;
+      margin-bottom: 15px;
+    }
+
+    .service-box p {
+      color: #ccc;
+      font-size: 0.95rem;
+    }
+
+    /* ===== PORTFOLIO ===== */
+    .portfolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .portfolio img {
+      width: 100%;
+      border-radius: 8px;
+      transition: transform 0.4s ease;
+    }
+
+    .portfolio img:hover {
+      transform: scale(1.05);
+    }
+
+    /* ===== CONTACT ===== */
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #1a1a1a;
+      padding: 40px;
+      border-radius: 10px;
+      border: 1px solid #222;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 15px;
+      margin: 10px 0;
+      background: #111;
+      border: 1px solid #333;
+      color: #fff;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    .contact-form button {
+      width: 100%;
+      padding: 15px;
+      background: #ff4d5a;
+      border: none;
+      border-radius: 6px;
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .contact-form button:hover {
+      background: #ff6b77;
+    }
+
+    .social-links {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .social-links a {
+      color: #ff4d5a;
+      margin: 0 15px;
+      font-size: 1.2rem;
+      transition: color 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #ff6b77;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #111;
+      text-align: center;
+      padding: 40px 20px;
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #ff4d5a;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 15px 30px;
+      }
+
+      .hero h2 {
+        font-size: 2.3rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      section {
+        padding: 80px 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CreativeVision</h1>
+    <nav>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="hero">
+    <h2>We Design Experiences That Speak Louder Than Words</h2>
+    <p>CreativeVision is a team of passionate designers crafting visuals that make your brand unforgettable.</p>
+    <a href="#contact">Get in Touch</a>
+  </section>
+
+  <section id="services">
+    <div class="section-title">
+      <h2>Our Services</h2>
+      <p>Premium design solutions to elevate your brand identity and digital presence.</p>
+    </div>
+    <div class="services">
+      <div class="service-box">
+        <h3>Brand Identity</h3>
+        <p>Logos, color systems, and complete brand guidelines that define who you are.</p>
+      </div>
+      <div class="service-box">
+        <h3>Social Media Design</h3>
+        <p>Trend-setting designs that grab attention and grow your audience online.</p>
+      </div>
+      <div class="service-box">
+        <h3>Print & Packaging</h3>
+        <p>High-impact materials like brochures, posters, and packaging that leave a mark.</p>
+      </div>
+      <div class="service-box">
+        <h3>Web & UI/UX Design</h3>
+        <p>Modern, functional, and visually captivating website and app designs.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <div class="section-title">
+      <h2>Our Work</h2>
+      <p>Check out some of our favorite design projects.</p>
+    </div>
+    <div class="portfolio">
+      <img src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?auto=format&fit=crop&w=800&q=80" alt="Design 1">
+      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Design 2">
+      <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=800&q=80" alt="Design 3">
+      <img src="https://images.unsplash.com/photo-1603570821771-d9d1cfbcded7?auto=format&fit=crop&w=800&q=80" alt="Design 4">
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="section-title">
+      <h2>Let’s Work Together</h2>
+      <p>Fill out the form below or reach us through our social channels.</p>
+    </div>
+
+    <form class="contact-form" action="mailto:creativevissionmannagement@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="social-links">
+      <a href="https://www.instagram.com/creativevissionmannagement" target="_blank">Instagram</a>
+      <a href="https://www.behance.net/creativevissionmannagement" target="_blank">Behance</a>
+      <a href="https://dribbble.com/creativevissionmannagement" target="_blank">Dribbble</a>
+      <a href="https://www.linkedin.com/company/creativevissionmannagement" target="_blank">LinkedIn</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 <a href="#">CreativeVision</a> Studio | All Rights Reserved</p>
+    <p>Email: <a href="mailto:creativevissionmannagement@gmail.com">creativevissionmannagement@gmail.com</a></p>
+  </footer>
+</body>
+</html>
